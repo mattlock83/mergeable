@@ -1,0 +1,14 @@
+name: Issue Rules
+
+on: issues
+
+jobs:
+  check-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Check Issues
+        uses: ./ # Uses action in the root directory
+        with:
+          config-file: 'issue-rules.yml'

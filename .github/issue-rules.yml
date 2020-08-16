@@ -1,0 +1,10 @@
+version: 2
+mergeable:
+  - when: issues.*
+    validate:
+      - do: label
+        must_include:
+          regex: 'feature|bug'
+    fail:
+      - do: labels
+        labels: [ 'Missing Type Label' ]
