@@ -1,14 +1,12 @@
 name: 'Mergeable'
-description: 'Mergeable helps automate your team's GitHub workflow without a single line of code.'
+description: 'Mergeable helps automate your team''s GitHub workflow without a single line of code.'
 inputs:
-config-file:
-  description: |
-    Allows mergeable configs to be supplied outside of the default path.
-    Additional config files need to still be in the .github folder
-  required: false
-  default: 'mergeable.yml'
+  config_file:
+    description: |
+      Allows mergeable configs to be supplied outside of the default path.
+      Additional config files need to still be in the .github folder
+    required: false
+    default: 'mergeable.yml'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.config-file }}

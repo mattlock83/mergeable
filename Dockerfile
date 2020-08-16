@@ -1,7 +1,6 @@
 FROM node:14.4.0-alpine
 ENV NODE_ENV=production \
 	IS_GITHUB_ACTION=true
-	CONFIG_PATH=${INPUT_CONFIG-FILE}
 WORKDIR /app
 COPY . .
 RUN npm set progress=false && \
