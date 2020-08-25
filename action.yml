@@ -8,5 +8,5 @@ inputs:
     required: false
     default: 'mergeable.yml'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'node12'
+  image: 'dist/index.js'
